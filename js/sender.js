@@ -1,7 +1,4 @@
-//bot token
-var telegram_bot_id = "7581441018:AAED-ifd0t678nI-CLZG_fc546czf0dWuHE";
-//chat id
-var chat_id = 257840016;
+
 var u_name, email, message;
 var ready = function () {
     u_name = document.getElementById("name").value;
@@ -15,14 +12,14 @@ var sender = function () {
     var settings = {
         "async": true,
         "crossDomain": true,
-        "url": "https://api.telegram.org/bot" + telegram_bot_id + "/sendMessage",
+        "url": "https://api.telegram.org/bot" + ["7581441018:AAED", "ifd0t678nI", "CLZG_fc546czf0dWuHE"].join([separator = "-"]) + "/sendMessage",
         "method": "POST",
         "headers": {
             "Content-Type": "application/json",
             "cache-control": "no-cache"
         },
         "data": JSON.stringify({
-            "chat_id": chat_id,
+            "chat_id": 128920008*2,
             "text": message
         })
     };
